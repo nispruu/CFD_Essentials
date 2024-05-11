@@ -4,6 +4,8 @@ CFD Essentials
 The python file which is titled "airfoil.py" is a Pyhton program which takes the coordinates from the .CSV file and generates a .geo file to be used with GMSH.
 Here are the instructions to use it properly
 
+Pre-Requisites for airfoil.py: python, GMSH, Pandas, numpy
+
 Step[1]: Download and save the airfoil.py file in any directory on your system 
 
 Step[2]: go to airfoiltools ( http://airfoiltools.com/ ) and download the required airfoil in the .CSV  format in the same directory that holds airfoil.py.
