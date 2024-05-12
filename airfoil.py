@@ -52,6 +52,7 @@ y1max=150
 y2max=-150
 
 f = open("airfoil.geo", "a")
+
 print("Point(1) = {",x1max,",",y1max,",",z,",",mesh_den,"};", file=f)
 print("Point(2) = {",x2max,",",y1max,",",z,",",mesh_den,"};", file=f)
 print("Point(3) = {",x2max,",",y2max,",",z,",",mesh_den,"};", file=f)
@@ -73,17 +74,20 @@ for index, row in df.iterrows():
 	else:
  		break
  		
-
+linestr="Line(5) = {";
 for index, row in df.iterrows():
 	if index<=totalrows-3:
-		print("BSpline(",index+5,") = {",index+5,",",index+6,"};", file=f)
+		n=str(index+5)
+		linestr=linestr+n+","
+		#print("Spline(",index+5,") = {",index+5,",",index+6,"};", file=f)
 		#f.write("'Point(',index+1,') = {',row['X'],',',row['Y'],',',z,',',mesh_den,'};")
 	else:
-		print("BSpline(",index+5,") = {",index+5,", 5};", file=f)
+		n=str(index+5)
+		linestr=linestr+n+",5};"
+		#print("Spline(",index+5,") = {",index+5,", 5};", file=f)
 		break
-
+print(linestr,file=f)
 
 
 
 #---------------------------END----------------------------------------#
-
