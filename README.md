@@ -16,3 +16,5 @@ Step[4]: open the .CSV airfoil data and copy the text in the cell B1. Then, open
 
 
 Then open the directory in the terminal and execute airfoil.py on the Terminal.
+
+Once the airfoil is in place within GMSH, then proceed as per this tutorial = "https://www.youtube.com/watch?v=bekRbU7rtZE&t=369s"
